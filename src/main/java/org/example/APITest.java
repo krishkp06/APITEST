@@ -86,4 +86,8 @@ public class APITest {
         given().log().all().spec(requestSpecification1).pathParam("productID", addProductResponse.getProductId()).when().delete("api/ecom/product/delete-product/{productID}")
                 .then().log().all();
     }
+
+    public loginRequest getLoginRequest() {
+        return loginRequest;
+    }
 }
